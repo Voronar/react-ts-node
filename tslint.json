@@ -1,0 +1,17 @@
+{
+  "extends": "tslint-microsoft-contrib",
+  "rules": {
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "no-default-export": false,
+    "no-implicit-dependencies": false,
+    "typedef": false,
+    "no-console": false,
+    "no-submodule-imports": false
+  }
+}
