@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "baseUrl": "src",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/**/@types"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "dist"
+  ]
+}
