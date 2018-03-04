@@ -60,3 +60,4 @@ typings/
 # custom
 dist
 .DS_Store
+package-lock.json

@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "module": "commonjs",
+    "module": "esnext",
+    "sourceMap": true,
+    "noUnusedLocals": true,
     "moduleResolution": "node",
     "target": "es2015",
     "lib": [
