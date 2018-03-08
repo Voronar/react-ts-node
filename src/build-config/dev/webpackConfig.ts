@@ -1,9 +1,9 @@
 /**
  * Webpack dev config
  */
-import * as path from 'path';
+// import * as path from 'path';
 import * as webpack from 'webpack';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+// import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import * as loaders from 'build-config/dev/loaders';
 import { CLIENT_APP_ENTRY, getSrcPath } from 'build-config/utils';
@@ -21,7 +21,7 @@ const webpackConfig: webpack.Configuration & { mode: string } = {
     CLIENT_APP_ENTRY,
   ],
   output: {
-    filename: 'app[[hash]].js',
+    filename: 'app.js',
     publicPath: '/',
   },
   module: {
@@ -44,11 +44,11 @@ const webpackConfig: webpack.Configuration & { mode: string } = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.join(getSrcPath(), 'assets', 'index.html'),
-      inject: 'body',
-      filename: 'index.html',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: path.join(getSrcPath(), 'assets', 'index.html'),
+    //   inject: 'body',
+    //   filename: 'index.html',
+    // }),
   ],
 };
 

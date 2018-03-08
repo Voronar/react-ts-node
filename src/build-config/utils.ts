@@ -12,5 +12,5 @@ export const getSrcPath = () => path.join(
 export const CLIENT_APP_ENTRY = path.join(
   getSrcPath(),
   'client',
-  'index.ts',
+  'index.tsx',
 );

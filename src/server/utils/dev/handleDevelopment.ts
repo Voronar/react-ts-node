@@ -1,7 +1,7 @@
 /**
  * Dev
  */
-import * as path from 'path';
+// import * as path from 'path';
 import * as express from 'express';
 import * as webpack from 'webpack';
 import * as webpackDevMiddleware from 'webpack-dev-middleware';
@@ -9,6 +9,8 @@ import * as webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from 'build-config/dev/webpackConfig';
 
 export function handleDevelopment(app: express.Application) {
+  console.log('+++DEVELOPMENT MODE+++');
+
   const compiler = webpack(webpackConfig);
   app.use(webpackDevMiddleware(compiler, {
     headers: { 'Access-Control-Allow-Origin': '*' },
@@ -25,7 +27,7 @@ export function handleDevelopment(app: express.Application) {
     heartbeat: 10 * 1000,
   }));
 
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', '..', '..', 'index.html'));
-  });
+  // app.get('/', (req, res) => {
+  //   res.sendFile(path.join(__dirname, '..', '..', '..', 'index.html'));
+  // });
 }
